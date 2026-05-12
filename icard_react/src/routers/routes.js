@@ -1,7 +1,7 @@
 import routesAdmin from "./routes.admin"; 
 import routesClient from "./routes.client"; 
-import { Error404 } from "../pages";
 import { BasicLayout } from "../layouts";
+import { Error404 } from "../pages";
 
 const routes = [
     ...routesAdmin,
