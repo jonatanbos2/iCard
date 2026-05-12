@@ -1,4 +1,3 @@
-// src/routes/Navigation.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { map } from "lodash";
@@ -13,6 +12,7 @@ export function Navigation() {
             key={index}
             path={route.path}
             element={
+              /* Envolvemos el componente de la página con su Layout correspondiente */
               <route.layout>
                 <route.component />
               </route.layout>
