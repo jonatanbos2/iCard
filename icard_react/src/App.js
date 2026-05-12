@@ -4,7 +4,9 @@ import { Navigation } from './routers';
 export default function App() {
   return (
     
-    <Navigation/>
+    <div>
+      <Navigation/> 
+    </div>
   );
 }
 
