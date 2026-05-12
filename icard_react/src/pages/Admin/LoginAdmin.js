@@ -1,10 +1,10 @@
 import React from 'react'
 
-export  function Error404() {
+export function LoginAdmin() {
   return (
     <div>
       <p>
-        Error404
+        Estamos en Login Adimin
       </p>
     </div>
   )
