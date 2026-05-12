@@ -1,13 +1,25 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// src/routes/Navigation.js
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { map } from "lodash";
+import routes from "./routes";
 
-export function Navigation() { 
+export function Navigation() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/" element={<div>Página de Inicio</div>} />
-        <Route path="/tarjetas" element={<div>Página de Tarjetas</div>} />
+        {map(routes, (route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            element={
+              <route.layout>
+                <route.component />
+              </route.layout>
+            }
+          />
+        ))}
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
