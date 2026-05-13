@@ -3,6 +3,5 @@ from users.api.views import UserApiViewSet
 
 router_user = DefaultRouter()
 
-router_user.register(
-    prefix='users', basename='users', viewset= UserApiViewSet
-)
+router_user.register(prefix='users', 
+ viewset=UserApiViewSet, basename='users')
